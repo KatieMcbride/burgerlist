@@ -1,5 +1,7 @@
 ### Schema
 
+DROP DATABASE IF EXISTS daBurger_db;
+
 CREATE DATABASE daBurger_db;
 USE daBurger_db;
 

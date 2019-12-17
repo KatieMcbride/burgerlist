@@ -49,6 +49,7 @@ function objToSql(ob) {
         cb(result);
       });
     },
+
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
 
@@ -59,7 +60,7 @@ function objToSql(ob) {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";;
   
-      console.log(queryString);
+      // console.log(queryString);
   
       connection.query(queryString, vals, function(err, result) {
         if (err) {
@@ -69,31 +70,31 @@ function objToSql(ob) {
         cb(result);
       });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
-    update: function(table, objColVals, condition, cb) {
-      var queryString = "UPDATE " + table;
+    // // An example of objColVals would be {name: panther, sleepy: true}
+    // update: function(table, objColVals, condition, cb) {
+    //   var queryString = "UPDATE " + table;
   
-      queryString += " SET ";
-      queryString += objToSql(objColVals);
-      queryString += " WHERE ";
-      queryString += condition;
+    //   queryString += " SET ";
+    //   queryString += objToSql(objColVals);
+    //   queryString += " WHERE ";
+    //   queryString += condition;
   
-      console.log(queryString);
-      connection.query(queryString, function(err, result) {
-        if (err) {
-          throw err;
-        }
+    //   console.log(queryString);
+    //   connection.query(queryString, function(err, result) {
+    //     if (err) {
+    //       throw err;
+    //     }
   
-        cb(result);
-      });
-    },
-    /* delete a row */
-    delete: function(table, condition, cb) {
-      const queryString = `DELETE FROM ${table} WHERE ${condition}`;
-      connection.query(queryString, function(err, result) {
-        cb(result);
-      });
-    },
+    //     cb(result);
+    //   });
+    // },
+    // /* delete a row */
+    // delete: function(table, condition, cb) {
+    //   const queryString = `DELETE FROM ${table} WHERE ${condition}`;
+    //   connection.query(queryString, function(err, result) {
+    //     cb(result);
+    //   });
+    // },
   };
   
 
