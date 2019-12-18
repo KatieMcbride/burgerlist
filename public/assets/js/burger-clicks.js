@@ -42,12 +42,12 @@ $(function() {
       );
     });
 
-    // $('.js-delete').on('click', function(event) {
-    //     const id = $(this).data('id');
-    //     $.ajax('/api/burgers/' + id, { type: 'DELETE' }).then(() =>{
-    //       location.reload();
-    //     });
-    // });
+    $('.js-delete').on('click', function(event) {
+        const id = $(this).data('id');
+        $.ajax('/api/burgers/' + id, { type: 'DELETE' }).then(() =>{
+          location.reload();
+        });
+    });
 
 
 });

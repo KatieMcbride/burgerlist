@@ -1,0 +1,28 @@
+.base{
+    background-color: #CAFAFE;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.headers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: pink;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    padding: 50px;
+}
+
+ul{
+}
